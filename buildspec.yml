@@ -6,9 +6,11 @@ phases:
       - echo 'install phase'
   build:
     commands:
-      - echo 'build phase'
-artifacts:
-  type: zip
-  files:
-    - "**/*"
-  discard-paths: no
+      - zip -r ruru8-lambda-practice.zip ./
+      - aws s3 cp ruru8-lambda-practice.zip s3://ruru8/
+      - aws lambda update-function-code --function-name ruru8-lambda-practice --s3-bucket ruru8 --s3-key ruru8-lambda-practice.zip
+# artifacts:
+#   type: zip
+#   files:
+#     - "**/*"
+#   discard-paths: no
