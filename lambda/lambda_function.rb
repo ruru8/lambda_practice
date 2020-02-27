@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 def lambda_handler(event:, context:)
-  puts 'masterにcommitしたらLambda自動デプロイできる？'
+  puts 'ディレクトリ配下かつbuildファイル名変更でLambda自動デプロイできる？'
 end
