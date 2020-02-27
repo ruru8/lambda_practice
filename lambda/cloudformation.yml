@@ -6,7 +6,7 @@ Resources:
     Properties:
       Code:
         S3Bucket: ruru8
-        S3Key: lambda_function.rb.zip
+        S3Key: ruru8-lambda-practice.zip
       Description: deploy lambda template
       FunctionName: ruru8_lambda_practice
       Handler: lambda_function.lambda_handler
